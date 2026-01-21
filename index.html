@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BBQ Daddy’s Catering | Frederick, MD</title>
+
+  <meta name="description" content="BBQ Daddy’s Catering in Frederick, MD. Weddings, corporate events, parties. Request a BBQ catering quote today." />
+  <meta name="theme-color" content="#0b0d12" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="container header-row">
+    <a class="brand" href="#">
+      <img class="logo-img" src="assets/logo.jpg" alt="BBQ Daddy’s logo" />
+      <span class="brand-text">
+        <strong>BBQ Daddy’s</strong>
+        <span class="muted">Catering • Frederick, MD</span>
+      </span>
+    </a>
+
+    <nav class="nav">
+      <a href="#services">Services</a>
+      <a href="#packages">Packages</a>
+      <a href="#gallery">Gallery</a>
+      <a class="btn" href="#quote">Request a Quote</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <p class="pill">Serving Frederick, MD & surrounding areas</p>
+      <h1>Smoked BBQ catering for events that people remember.</h1>
+
+      <p class="lead">
+        Weddings • Corporate lunches • Birthdays • Graduations • Private parties.
+        Real BBQ, cooked low and slow.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn" href="#quote">Get a Quote</a>
+        <a class="btn secondary" href="#packages">View Packages</a>
+      </div>
+
+      <p class="small muted">
+        Questions? Email
+        <a href="mailto:BBQ.Daddys.info@gmail.com">BBQ.Daddys.info@gmail.com</a>
+      </p>
+    </div>
+
+    <!-- HERO IMAGE -->
+    <div class="hero-card hero-media">
+      <img src="assets/catering-table.png" alt="BBQ Daddy’s catering spread" />
+      <div class="hero-media-overlay">
+        <strong>Perfect for any crowd</strong>
+        <p class="muted">From small gatherings to large events</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section id="services" class="section">
+  <div class="container">
+    <h2>Services</h2>
+    <p class="muted">Choose what fits your event — we handle the rest.</p>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Drop-Off Catering</h3>
+        <p>Hot, ready-to-serve trays delivered to your venue.</p>
+      </div>
+
+      <div class="card">
+        <h3>Full Service (Staffed)</h3>
+        <p>Setup, serving, and cleanup for stress-free events.</p>
+      </div>
+
+      <div class="card">
+        <h3>Custom Menus</h3>
+        <p>Build your spread with proteins, sides, and sauces.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PACKAGES ================= -->
+<section id="packages" class="section alt">
+  <div class="container">
+    <h2>Packages</h2>
+    <p class="muted">Sample packages — pricing depends on headcount & service.</p>
+
+    <div class="pricing">
+      <div class="card">
+        <h3>Classic BBQ</h3>
+        <ul class="checklist">
+          <li>2 proteins</li>
+          <li>2 sides</li>
+          <li>Buns & sauces</li>
+        </ul>
+      </div>
+
+      <div class="card featured">
+        <h3>Event Favorite</h3>
+        <ul class="checklist">
+          <li>2–3 proteins</li>
+          <li>3 sides</li>
+          <li>Optional staffed service</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Corporate Lunch</h3>
+        <ul class="checklist">
+          <li>Buffet or boxed meals</li>
+          <li>Easy delivery</li>
+          <li>Dietary options available</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section id="gallery" class="section">
+  <div class="container">
+    <h2>Sample Catering</h2>
+    <p class="muted">A few customer favorites</p>
+
+    <div class="gallery">
+      <figure class="card">
+        <img src="assets/brisket.png" alt="Smoked brisket" />
+        <figcaption class="muted small">Smoked Brisket</figcaption>
+      </figure>
+
+      <figure class="card">
+        <img src="assets/wings.png" alt="BBQ wings" />
+        <figcaption class="muted small">Sauced Wings</figcaption>
+      </figure>
+
+      <figure class="card">
+        <img src="assets/catering-table.png" alt="Full BBQ catering spread" />
+        <figcaption class="muted small">Full Catering Spread</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= QUOTE FORM ================= -->
+<section id="quote" class="section alt">
+  <div class="container">
+    <h2>Request a Quote</h2>
+    <p class="muted">Fill this out and we’ll reply by email.</p>
+
+    <!-- IMPORTANT: Replace REPLACE_ME with your Formspree endpoint -->
+    <form class="form" action="https://formspree.io/f/REPLACE_ME" method="POST">
+      <input type="hidden" name="_subject" value="New Quote Request - BBQ Daddy’s" />
+      <input type="hidden" name="_next" value="https://www.bbqdaddys.com/thanks.html" />
+      <input type="text" name="_gotcha" style="display:none" />
+
+      <div class="grid-2">
+        <label>
+          Name
+          <input name="name" required />
+        </label>
+
+        <label>
+          Email
+          <input type="email" name="email" required />
+        </label>
+
+        <label>
+          Event Date
+          <input type="date" name="event_date" required />
+        </label>
+
+        <label>
+          Estimated Guests
+          <input type="number" name="guest_count" required />
+        </label>
+      </div>
+
+      <label>
+        Event Location
+        <input name="location" required />
+      </label>
+
+      <label>
+        Details
+        <textarea name="details" rows="6" required></textarea>
+      </label>
+
+      <button class="btn" type="submit">Send Quote Request</button>
+    </form>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <strong>BBQ Daddy’s</strong>
+      <p class="muted">Frederick, MD</p>
+    </div>
+
+    <div>
+      <a href="mailto:BBQ.Daddys.info@gmail.com">BBQ.Daddys.info@gmail.com</a>
+    </div>
+
+    <div class="small muted">
+      © <span id="year"></span> BBQ Daddy’s
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
