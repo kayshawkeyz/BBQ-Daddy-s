@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Thanks! | BBQ Daddy’s</title>
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#0b0d12" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="index.html">
+        <img class="logo-img" src="assets/logo.jpg" alt="BBQ Daddy’s logo" />
+        <span class="brand-text">
+          <strong>BBQ Daddy’s</strong>
+          <span class="muted">Catering • Frederick, MD</span>
+        </span>
+      </a>
+
+      <a class="btn secondary" href="index.html#quote">Back to form</a>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="card">
+        <h1 style="margin:0 0 10px">Request received 🔥</h1>
+        <p class="muted" style="margin:0 0 12px">
+          Thanks for reaching out! We’ll review your details and reply as soon as possible.
+        </p>
+        <p style="margin:0 0 16px">
+          If you need to add anything, email
+          <a href="mailto:BBQ.Daddys.info@gmail.com">BBQ.Daddys.info@gmail.com</a>.
+        </p>
+
+        <a class="btn" href="index.html">Return to homepage</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>BBQ Daddy’s</strong>
+        <p class="muted" style="margin:4px 0 0">Frederick, MD</p>
+      </div>
+
+      <div class="small muted">
+        © <span id="year"></span> BBQ Daddy’s
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
