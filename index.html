@@ -168,26 +168,36 @@
   <input type="text" name="_gotcha" style="display:none" />
 
   <div class="grid-2">
-    <label>
-      Name
-      <input name="name" required />
-    </label>
+  <label>
+    Name
+    <input name="name" required />
+  </label>
 
-    <label>
-      Email
-      <input type="email" name="email" required />
-    </label>
+  <label>
+    Email
+    <input type="email" name="email" required />
+  </label>
 
-    <label>
-      Event Date
-      <input type="date" name="event_date" required />
-    </label>
+  <label>
+    Event Date
+    <input type="date" name="event_date" required />
+  </label>
 
-    <label>
-      Estimated Guests
-      <input type="number" name="guest_count" required />
-    </label>
-  </div>
+  <label>
+    Estimated Guests
+    <input type="number" name="guest_count" required />
+  </label>
+
+  <label>
+    Catering Style
+    <select name="catering_style" required>
+      <option value="">Select an option</option>
+      <option value="Pick-up">Pick-up</option>
+      <option value="Delivery">Delivery</option>
+      <option value="Private Event">Private Event</option>
+    </select>
+  </label>
+</div>
 
   <label>
     Event Location
