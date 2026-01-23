@@ -56,7 +56,6 @@
       </p>
     </div>
 
-    <!-- HERO IMAGE -->
     <div class="hero-card hero-media">
       <img src="assets/catering-table.png" alt="BBQ Daddy’s catering spread" />
       <div class="hero-media-overlay">
@@ -98,7 +97,6 @@
     <h2>Catering Menu</h2>
     <p class="muted">Meats &amp; More • Sides • Desserts • Drinks</p>
 
-    <!-- Row 1: Beef / Bird / Seafood -->
     <div class="menu-grid-3">
       <div class="card menu-card">
         <h3>Beef</h3>
@@ -139,7 +137,6 @@
       </div>
     </div>
 
-    <!-- Row 2: Sides / Desserts / Drinks -->
     <div class="menu-grid-3 menu-grid-3-second">
       <div class="card menu-card">
         <h3>Sides</h3>
@@ -180,11 +177,6 @@
         </ul>
       </div>
     </div>
-
-    <div class="menu-note card">
-      <strong>Note:</strong>
-      <span class="muted">Menu items and availability may vary. Tell us your headcount and catering style for a custom quote.</span>
-    </div>
   </div>
 </section>
 
@@ -219,50 +211,62 @@
     <h2>Request a Quote</h2>
     <p class="muted">Fill this out and we’ll reply by email.</p>
 
-    <!-- IMPORTANT: Replace REPLACE_ME with your Formspree endpoint -->
-<form class="form" action="https://formspree.io/f/mzddqjzy" method="POST">
-  <input type="hidden" name="_subject" value="BBQ Daddy’s Quote Request (Website)" />
-  <input type="hidden" name="source" value="bbq-daddys.com" />
-  <input type="hidden" name="_next" value="https://www.bbq-daddys.com/thanks.html" />
-  <input type="text" name="_gotcha" style="display:none" />
+    <form class="form" action="https://formspree.io/f/mzddqjzy" method="POST">
+      <input type="hidden" name="_subject" value="BBQ Daddy’s Quote Request (Website)" />
+      <input type="hidden" name="source" value="bbq-daddys.com" />
+      <input type="hidden" name="_next" value="https://www.bbq-daddys.com/thanks.html" />
+      <input type="text" name="_gotcha" style="display:none" />
 
-  <div class="grid-2">
-  <label>
-    Name
-    <input name="name" required />
-  </label>
+      <div class="grid-2">
+        <label>
+          Name
+          <input name="name" required />
+        </label>
 
-  <label>
-    Email
-    <input type="email" name="email" required />
-  </label>
+        <label>
+          Email
+          <input type="email" name="email" required />
+        </label>
 
-  <label>
-    Event Date
-    <input type="date" name="event_date" required />
-  </label>
+        <label>
+          Event Date
+          <input type="date" name="event_date" required />
+        </label>
 
-  <label>
-    Estimated Guests
-    <input type="number" name="guest_count" required />
-  </label>
+        <label>
+          Estimated Guests
+          <input type="number" name="guest_count" required />
+        </label>
 
-  <label>
-    Catering Style
-    <select name="catering_style" required>
-      <option value="">Select an option</option>
-      <option value="Pick-up">Pick-up</option>
-      <option value="Delivery">Delivery</option>
-      <option value="Private Event">Private Event</option>
-    </select>
-  </label>
+        <label>
+          Catering Style
+          <select name="catering_style" required>
+            <option value="">Select an option</option>
+            <option value="Pick-up">Pick-up</option>
+            <option value="Delivery">Delivery</option>
+            <option value="Private Event">Private Event</option>
+          </select>
+        </label>
 
-  <label>
-    Event Location
-    <input name="location" required />
-  </label>
-</div>
+        <label>
+          Event Location
+          <input name="location" required placeholder="Venue address or city" />
+        </label>
+      </div>
 
+      <label>
+        Event Details
+        <textarea
+          name="details"
+          rows="6"
+          required
+          placeholder="Tell us about your event, menu ideas, dietary needs, timing, setup, etc."></textarea>
+      </label>
+
+      <button class="btn" type="submit">Send Quote Request</button>
+    </form>
+  </div>
+</section>
 
 <!-- ================= FOOTER ================= -->
 <footer class="site-footer">
