@@ -374,19 +374,19 @@ select:focus{
   gap:8px;
 }
 
-.menu-list li{
-  padding-left: 18px;
-  position: relative;
-  color: rgba(244,246,255,.92);
+.menu-card{
+  text-align:center;
 }
 
-.menu-list li::before{
-  content: "•";
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: var(--accent);
-  font-weight: 900;
+.menu-list{
+  padding:0;
+}
+
+.menu-list li{
+  padding-left: 0;
+  color: rgba(244,246,255,.95);
+  font-size:16px;
+  line-height:1.6;
 }
 
 .menu-note{
