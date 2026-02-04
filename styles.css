@@ -75,6 +75,25 @@ a{color:inherit; text-decoration:none}
 .nav a{opacity:.92}
 .nav a:hover{opacity:1}
 
+.hero-title{
+  font-size:56px;
+  font-weight:900;
+  letter-spacing:.04em;
+  margin:0 0 6px;
+}
+
+.hero-subtitle{
+  font-size:20px;
+  font-weight:600;
+  color: rgba(244,246,255,.9);
+  margin:0 0 14px;
+}
+
+@media (max-width: 700px){
+  .hero-title{ font-size:42px; }
+  .hero-subtitle{ font-size:16px; }
+}
+
 /* ===== Buttons ===== */
 .btn{
   display:inline-block;
