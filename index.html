@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>BBQ Daddy’s | Frederick, MD</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BBQ Daddy’s | Frederick, MD</title>
 
-<meta name="description" content="BBQ Daddy’s craft BBQ restaurant and catering in Frederick, MD." />
-<meta name="theme-color" content="#0b0d12" />
+  <meta name="description" content="BBQ Daddy’s craft BBQ restaurant and catering in Frederick, MD." />
+  <meta name="theme-color" content="#0b0d12" />
 
-<link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
@@ -16,7 +16,7 @@
 <header class="site-header">
   <div class="container header-row">
     <a class="brand" href="#">
-      <img class="logo-img" src="assets/logo.jpg" />
+      <img class="logo-img" src="assets/logo.jpg" alt="BBQ Daddy’s logo" />
       <span class="brand-text">
         <strong>BBQ Daddy’s</strong>
         <span class="muted">Frederick, MD</span>
@@ -44,164 +44,220 @@
         <a class="btn" href="#quote">Get a Quote</a>
         <a class="btn secondary" href="#menu">View Menu</a>
       </div>
+
+      <p class="small muted">
+        Questions? Email
+        <a href="mailto:BBQ.Daddys.Info@gmail.com">BBQ.Daddys.Info@gmail.com</a>
+      </p>
     </div>
   </div>
 </section>
 
-<!-- MENU -->
+<!-- MENU (Burnt Bean style: simple headings + simple lists) -->
 <section id="menu" class="section alt">
-<div class="container">
+  <div class="container">
+    <h2 class="page-title">Menu</h2>
 
-<h2 class="menu-title">Menu</h2>
+    <nav class="menu-jump" aria-label="Menu jump links">
+      <a href="#menu-beef">Beef</a>
+      <a href="#menu-bird">Bird</a>
+      <a href="#menu-seafood">Seafood</a>
+      <a href="#menu-sides">Sides</a>
+      <a href="#menu-desserts">Desserts</a>
+      <a href="#menu-drinks">Drinks</a>
+    </nav>
 
-<div class="menu-wrap">
+    <div class="menu-block" id="menu-beef">
+      <h3 class="menu-h">Beef</h3>
+      <div class="menu-items">
+        <p>Smoked Cowboy Steak</p>
+        <p>Smoked Ribeye</p>
+        <p>Slow-Smoked Brisket</p>
+        <p>Dino Beef Ribs</p>
+        <p>Smoked Oxtail</p>
+        <p>Beef Sausage</p>
+        <p>Jamaican Beef Patty</p>
+      </div>
+    </div>
 
-<nav class="menu-nav">
-<a class="menu-link" href="#menu-beef">Beef</a>
-<a class="menu-link" href="#menu-bird">Bird</a>
-<a class="menu-link" href="#menu-seafood">Seafood</a>
-<a class="menu-link" href="#menu-sides">Sides</a>
-<a class="menu-link" href="#menu-desserts">Desserts</a>
-<a class="menu-link" href="#menu-drinks">Drinks</a>
-</nav>
+    <div class="menu-block" id="menu-bird">
+      <h3 class="menu-h">Bird</h3>
+      <div class="menu-items">
+        <p>Chicken Wings <span class="menu-note-inline">(20+ Flavors)</span></p>
+        <p>Jamaican Jerk Chicken</p>
+        <p>Ember-Fried Chicken &amp; Caviar</p>
+        <p>Hot Chicken Sausage</p>
+        <p>Jamaican Jerk Chicken Patty</p>
+        <p>Roasted Turkey</p>
+        <p>House Meatballs</p>
+      </div>
+    </div>
 
-<div class="menu-content">
+    <div class="menu-block" id="menu-seafood">
+      <h3 class="menu-h">Seafood</h3>
+      <div class="menu-items">
+        <p>Seafood Boil Campanelle</p>
+        <p>Mini Crab Cakes</p>
+        <p>Smoked &amp; Glazed Salmon Bites</p>
+        <p>Stuffed Fried Fish</p>
+        <p>Whole Snapper</p>
+        <p>King Crab Legs</p>
+      </div>
+    </div>
 
-<section id="menu-beef" class="menu-section">
-<h3>Beef</h3>
-<ul class="menu-items">
-<li>Smoked Cowboy Steak</li>
-<li>Smoked Ribeye</li>
-<li>Slow-Smoked Brisket</li>
-<li>Dino Beef Ribs</li>
-<li>Smoked Oxtail</li>
-<li>Beef Sausage</li>
-<li>Jamaican Beef Patty</li>
-</ul>
-</section>
+    <div class="menu-block" id="menu-sides">
+      <h3 class="menu-h">Sides</h3>
+      <div class="menu-items">
+        <p>Baked Mac &amp; Cheese</p>
+        <p>Honey-Fried Cheese</p>
+        <p>Cowboy Beans</p>
+        <p>Beefy Greens</p>
+        <p>Cornbread</p>
+        <p>Sautéed Cabbage</p>
+        <p>Potato Salad</p>
+        <p>Native Succotash</p>
+        <p>Rasta Pasta</p>
+        <p>Seafood Salad</p>
+      </div>
+    </div>
 
-<section id="menu-bird" class="menu-section">
-<h3>Bird</h3>
-<ul class="menu-items">
-<li>Chicken Wings <span class="muted small">(20+ Flavors)</span></li>
-<li>Jamaican Jerk Chicken</li>
-<li>Ember-Fried Chicken & Caviar</li>
-<li>Hot Chicken Sausage</li>
-<li>Jamaican Jerk Chicken Patty</li>
-<li>Roasted Turkey</li>
-<li>House Meatballs</li>
-</ul>
-</section>
+    <div class="menu-block" id="menu-desserts">
+      <h3 class="menu-h">Desserts</h3>
+      <div class="menu-items">
+        <p>Dark Rum Pineapple Upside-Down Cake</p>
+        <p>Banana Pudding</p>
+        <p>Bread Pudding</p>
+        <p>Mini Cheesecakes</p>
+        <p>Tres Leches</p>
+      </div>
+    </div>
 
-<section id="menu-seafood" class="menu-section">
-<h3>Seafood</h3>
-<ul class="menu-items">
-<li>Seafood Boil Campanelle</li>
-<li>Mini Crab Cakes</li>
-<li>Smoked & Glazed Salmon Bites</li>
-<li>Stuffed Fried Fish</li>
-<li>Whole Snapper</li>
-<li>King Crab Legs</li>
-</ul>
-</section>
+    <div class="menu-block" id="menu-drinks">
+      <h3 class="menu-h">Drinks</h3>
+      <div class="menu-items">
+        <p>Premium Water (Still or Sparkling)</p>
+        <p>Fresh Lemonade</p>
+        <p>Arnold Palmer</p>
+        <p>Iced Tea</p>
+        <p>Assorted Juices</p>
+        <p>Soda</p>
+      </div>
+    </div>
 
-<section id="menu-sides" class="menu-section">
-<h3>Sides</h3>
-<ul class="menu-items">
-<li>Baked Mac & Cheese</li>
-<li>Honey-Fried Cheese</li>
-<li>Cowboy Beans</li>
-<li>Beefy Greens</li>
-<li>Cornbread</li>
-<li>Sautéed Cabbage</li>
-<li>Potato Salad</li>
-<li>Native Succotash</li>
-<li>Rasta Pasta</li>
-<li>Seafood Salad</li>
-</ul>
-</section>
-
-<section id="menu-desserts" class="menu-section">
-<h3>Desserts</h3>
-<ul class="menu-items">
-<li>Dark Rum Pineapple Upside-Down Cake</li>
-<li>Banana Pudding</li>
-<li>Bread Pudding</li>
-<li>Mini Cheesecakes</li>
-<li>Tres Leches</li>
-</ul>
-</section>
-
-<section id="menu-drinks" class="menu-section">
-<h3>Drinks</h3>
-<ul class="menu-items">
-<li>Premium Water (Still or Sparkling)</li>
-<li>Fresh Lemonade</li>
-<li>Arnold Palmer</li>
-<li>Iced Tea</li>
-<li>Assorted Juices</li>
-<li>Soda</li>
-</ul>
-</section>
-
-</div>
-</div>
-</div>
+    <p class="small muted" style="margin-top:18px;">
+      Menu items and availability may vary. Tell us your headcount and catering style for a custom quote.
+    </p>
+  </div>
 </section>
 
 <!-- GALLERY -->
 <section id="gallery" class="section">
-<div class="container">
-<h2>Gallery</h2>
+  <div class="container">
+    <h2>Gallery</h2>
+    <p class="muted">A few customer favorites</p>
 
-<div class="gallery">
-<img src="assets/brisket.png">
-<img src="assets/wings.png">
-<img src="assets/catering-table.png">
-</div>
-</div>
+    <div class="gallery">
+      <figure class="card">
+        <img src="assets/brisket.png" alt="Smoked brisket" />
+        <figcaption class="muted small">Smoked Brisket</figcaption>
+      </figure>
+
+      <figure class="card">
+        <img src="assets/wings.png" alt="BBQ wings" />
+        <figcaption class="muted small">Sauced Wings</figcaption>
+      </figure>
+
+      <figure class="card">
+        <img src="assets/catering-table.png" alt="Full BBQ catering spread" />
+        <figcaption class="muted small">Full Catering Spread</figcaption>
+      </figure>
+    </div>
+  </div>
 </section>
 
 <!-- QUOTE -->
 <section id="quote" class="section alt">
-<div class="container">
-<h2>Request a Quote</h2>
+  <div class="container">
+    <h2>Request a Quote</h2>
+    <p class="muted">Fill this out and we’ll reply by email.</p>
 
-<form class="form" action="https://formspree.io/f/mzddqjzy" method="POST">
+    <form class="form" action="https://formspree.io/f/mzddqjzy" method="POST">
+      <input type="hidden" name="_subject" value="BBQ Daddy’s Quote Request (Website)" />
+      <input type="hidden" name="source" value="bbq-daddys.com" />
+      <input type="hidden" name="_next" value="https://bbq-daddys.com/thanks.html" />
+      <input type="text" name="_gotcha" style="display:none" />
 
-<input type="hidden" name="_next" value="https://bbq-daddys.com/thanks.html">
+      <div class="grid-2">
+        <label>
+          Name
+          <input name="name" required />
+        </label>
 
-<div class="grid-2">
-<input name="name" placeholder="Name" required>
-<input type="email" name="email" placeholder="Email" required>
-<input type="date" name="event_date" required>
-<input type="number" name="guest_count" placeholder="Estimated Guests" required>
+        <label>
+          Email
+          <input type="email" name="email" required />
+        </label>
 
-<select name="catering_style" required>
-<option value="">Catering Style</option>
-<option>Pick-up</option>
-<option>Delivery</option>
-<option>Private Event</option>
-</select>
+        <label>
+          Event Date
+          <input type="date" name="event_date" required />
+        </label>
 
-<input name="location" placeholder="Venue address or city" required>
-</div>
+        <label>
+          Estimated Guests
+          <input type="number" name="guest_count" required />
+        </label>
 
-<textarea name="details" rows="6" placeholder="Tell us about your event..." required></textarea>
+        <label>
+          Catering Style
+          <select name="catering_style" required>
+            <option value="">Select an option</option>
+            <option value="Pick-up">Pick-up</option>
+            <option value="Delivery">Delivery</option>
+            <option value="Private Event">Private Event</option>
+          </select>
+        </label>
 
-<button class="btn" type="submit">Send Quote Request</button>
+        <label>
+          Event Location
+          <input name="location" required placeholder="Venue address or city" />
+        </label>
+      </div>
 
-</form>
-</div>
+      <label>
+        Event Details
+        <textarea
+          name="details"
+          rows="6"
+          required
+          placeholder="Tell us about your event, menu ideas, dietary needs, timing, setup, etc."></textarea>
+      </label>
+
+      <button class="btn" type="submit">Send Quote Request</button>
+    </form>
+  </div>
 </section>
 
 <footer class="site-footer">
-<div class="container footer-grid">
-<div>BBQ Daddy’s</div>
-<div><a href="mailto:BBQ.Daddys.Info@gmail.com">BBQ.Daddys.Info@gmail.com</a></div>
-<div>© BBQ Daddy’s</div>
-</div>
+  <div class="container footer-grid">
+    <div>
+      <strong>BBQ Daddy’s</strong>
+      <p class="muted">Frederick, MD</p>
+    </div>
+
+    <div>
+      <a href="mailto:BBQ.Daddys.Info@gmail.com">BBQ.Daddys.Info@gmail.com</a>
+    </div>
+
+    <div class="small muted">
+      © <span id="year"></span> BBQ Daddy’s
+    </div>
+  </div>
 </footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
