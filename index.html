@@ -32,7 +32,7 @@
 </header>
 
 <!-- HERO -->
-<section class="hero fade">
+<section class="hero fade" data-parallax="0.20">
   <div class="container hero-grid">
     <div>
       <h1 class="hero-title">BBQ DADDY’S</h1>
@@ -56,10 +56,10 @@
 <!-- MENU -->
 <section id="menu" class="section alt">
   <div class="container">
-    <h2 class="page-title">Menu</h2>
+    <h2>Menu</h2>
 
-    <!-- Floating Menu Navigation -->
-    <nav class="menu-jump menu-jump--sticky" aria-label="Menu jump links">
+    <!-- Floating Menu Navigation (auto-highlight via scripts.js) -->
+    <nav class="float-nav" aria-label="Menu navigation">
       <a href="#menu-beef">Beef</a>
       <a href="#menu-bird">Bird</a>
       <a href="#menu-seafood">Seafood</a>
@@ -69,7 +69,7 @@
     </nav>
 
     <!-- BEEF -->
-    <div class="menu-block fade" id="menu-beef">
+    <div class="menu-block fade bg-beef" id="menu-beef" data-parallax="0.18">
       <h3 class="menu-h">Beef</h3>
       <div class="menu-items">
         <p>Smoked Tomahawk Steak</p>
@@ -83,7 +83,7 @@
     </div>
 
     <!-- BIRD -->
-    <div class="menu-block fade" id="menu-bird">
+    <div class="menu-block fade bg-bird" id="menu-bird" data-parallax="0.18">
       <h3 class="menu-h">Bird</h3>
       <div class="menu-items">
         <p>Chicken Wings <span class="menu-note-inline">(20+ Flavors)</span></p>
@@ -97,7 +97,7 @@
     </div>
 
     <!-- SEAFOOD -->
-    <div class="menu-block fade" id="menu-seafood">
+    <div class="menu-block fade bg-seafood" id="menu-seafood" data-parallax="0.18">
       <h3 class="menu-h">Seafood</h3>
       <div class="menu-items">
         <p>Seafood Boil Campanelle</p>
@@ -110,7 +110,7 @@
     </div>
 
     <!-- SIDES -->
-    <div class="menu-block fade" id="menu-sides">
+    <div class="menu-block fade bg-sides" id="menu-sides" data-parallax="0.18">
       <h3 class="menu-h">Sides</h3>
       <div class="menu-items">
         <p>Baked Mac &amp; Cheese</p>
@@ -127,7 +127,7 @@
     </div>
 
     <!-- DESSERTS -->
-    <div class="menu-block fade" id="menu-desserts">
+    <div class="menu-block fade bg-desserts" id="menu-desserts" data-parallax="0.18">
       <h3 class="menu-h">Desserts</h3>
       <div class="menu-items">
         <p>Dark Rum Pineapple Upside-Down Cake</p>
@@ -139,7 +139,7 @@
     </div>
 
     <!-- DRINKS -->
-    <div class="menu-block fade" id="menu-drinks">
+    <div class="menu-block fade bg-drinks" id="menu-drinks" data-parallax="0.18">
       <h3 class="menu-h">Drinks</h3>
       <div class="menu-items">
         <p>Premium Water (Still or Sparkling)</p>
@@ -151,7 +151,7 @@
       </div>
     </div>
 
-    <p class="small muted" style="margin-top:18px;">
+    <p class="small muted" style="margin-top:18px; text-align:center;">
       Menu items and availability may vary. Tell us your headcount and catering style for a custom quote.
     </p>
   </div>
@@ -162,41 +162,55 @@
   <div class="container">
     <h2>Gallery</h2>
 
-    <div class="gallery">
+    <div class="gallery masonry" id="galleryGrid">
 
-      <!-- Existing -->
-      <figure class="card">
-        <img src="assets/brisket.png" alt="Smoked brisket">
+      <figure class="g-item card">
+        <img src="assets/brisket.png" alt="Smoked brisket" loading="lazy" decoding="async" />
+        <figcaption>Smoked Brisket</figcaption>
       </figure>
 
-      <figure class="card">
-        <img src="assets/wings.png" alt="Chicken wings">
+      <figure class="g-item card">
+        <img src="assets/wings.png" alt="Chicken wings" loading="lazy" decoding="async" />
+        <figcaption>Chicken Wings</figcaption>
       </figure>
 
-      <figure class="card">
-        <img src="assets/catering-table.png" alt="Full catering spread">
+      <figure class="g-item card">
+        <img src="assets/catering-table.png" alt="Full catering spread" loading="lazy" decoding="async" />
+        <figcaption>Full Spread</figcaption>
       </figure>
 
-      <!-- NEW -->
-      <figure class="card">
-        <img src="assets/jerk-chicken.png" alt="Jerk chicken">
+      <figure class="g-item card">
+        <img src="assets/jerk-chicken.png" alt="Jerk chicken" loading="lazy" decoding="async" />
+        <figcaption>Jerk Chicken</figcaption>
       </figure>
 
-      <figure class="card">
-        <img src="assets/king-crab.png" alt="King crab legs">
+      <figure class="g-item card">
+        <img src="assets/king-crab.png" alt="King crab legs" loading="lazy" decoding="async" />
+        <figcaption>King Crab</figcaption>
       </figure>
 
-      <figure class="card">
-        <img src="assets/sausage.png" alt="Smoked sausage">
+      <figure class="g-item card">
+        <img src="assets/sausage.png" alt="Smoked sausage" loading="lazy" decoding="async" />
+        <figcaption>Smoked Sausage</figcaption>
       </figure>
 
-      <figure class="card">
-        <img src="assets/tomahawk-ribeye.png" alt="Tomahawk ribeye steak">
+      <figure class="g-item card">
+        <img src="assets/tomahawk-ribeye.png" alt="Tomahawk ribeye steak" loading="lazy" decoding="async" />
+        <figcaption>Tomahawk Ribeye</figcaption>
       </figure>
 
     </div>
   </div>
 </section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <div class="lightbox-inner">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close image">×</button>
+    <img class="lightbox-img" id="lightboxImg" alt="" />
+    <p class="lightbox-cap" id="lightboxCap"></p>
+  </div>
+</div>
 
 <!-- QUOTE -->
 <section id="quote" class="section alt fade">
@@ -278,22 +292,7 @@
   </div>
 </footer>
 
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-
-  // Fade-in on scroll
-  const els = document.querySelectorAll('.fade');
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('in');
-        io.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.12 });
-
-  els.forEach(el => io.observe(el));
-</script>
+<script src="scripts.js"></script>
 
 </body>
 </html>
