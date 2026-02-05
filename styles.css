@@ -25,13 +25,13 @@ body{
   line-height:1.5;
 }
 
-a{color:inherit; text-decoration:none}
-.container{max-width:1100px; margin:0 auto; padding:0 18px}
+a{color:inherit;text-decoration:none}
+.container{max-width:1100px;margin:0 auto;padding:0 18px}
 
 .muted{color:var(--muted)}
 .small{font-size:12px}
 
-/* ===== Header ===== */
+/* ================= Header ================= */
 .site-header{
   position:sticky; top:0; z-index:50;
   background: rgba(11,13,18,.72);
@@ -82,7 +82,7 @@ a{color:inherit; text-decoration:none}
   .nav{display:none}
 }
 
-/* ===== Buttons ===== */
+/* ================= Buttons ================= */
 .btn{
   display:inline-block;
   padding:12px 16px;
@@ -90,7 +90,7 @@ a{color:inherit; text-decoration:none}
   background: var(--accent);
   border:1px solid rgba(255,255,255,.18);
   box-shadow: 0 10px 30px rgba(255,77,46,.18);
-  font-weight:750;
+  font-weight:800;
 }
 
 .btn.secondary{
@@ -99,7 +99,7 @@ a{color:inherit; text-decoration:none}
   box-shadow:none;
 }
 
-/* ===== Hero ===== */
+/* ================= Hero ================= */
 .hero{
   position: relative;
   padding:92px 0 70px;
@@ -134,7 +134,7 @@ a{color:inherit; text-decoration:none}
 
 .hero-subtitle{
   font-size:20px;
-  font-weight:600;
+  font-weight:650;
   color: rgba(244,246,255,.9);
   margin:0 0 14px;
 }
@@ -160,7 +160,7 @@ a{color:inherit; text-decoration:none}
   .hero-subtitle{ font-size:16px; }
 }
 
-/* ===== Sections / Cards ===== */
+/* ================= Sections ================= */
 .section{ padding:42px 0; }
 
 .section.alt{
@@ -177,12 +177,13 @@ a{color:inherit; text-decoration:none}
   box-shadow: var(--shadow);
 }
 
-/* ===== Burnt-Bean style menu ===== */
+/* ================= Menu (Burnt Bean style) ================= */
 .page-title{
   font-size:40px;
   margin:0 0 10px;
 }
 
+/* jump links */
 .menu-jump{
   display:flex;
   flex-wrap:wrap;
@@ -193,7 +194,7 @@ a{color:inherit; text-decoration:none}
 }
 
 .menu-jump a{
-  font-weight:750;
+  font-weight:800;
   opacity:.95;
   padding:6px 10px;
   border-radius:999px;
@@ -203,17 +204,43 @@ a{color:inherit; text-decoration:none}
 
 .menu-jump a:hover{opacity:1}
 
-.menu-block{
-  padding: 18px 0;
-  border-bottom: 1px solid var(--border);
+/* floating/sticky menu navigation */
+.menu-jump--sticky{
+  position: sticky;
+  top: 68px; /* below header */
+  z-index: 40;
+  background: rgba(11,13,18,.78);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 10px 12px;
+  margin: 10px 0 22px;
 }
 
+/* section blocks + Burnt Bean-ish divider */
+.menu-block{
+  padding: 44px 0;
+  border-bottom: 1px solid rgba(255,255,255,.12);
+  position: relative;
+}
+
+.menu-block::after{
+  content:"";
+  position:absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,77,46,.35), transparent);
+}
+
+/* centered + bold headers/items */
 .menu-h{
   margin:0 0 14px;
-  font-size:26px;
+  font-size:28px;
   font-weight:900;
   text-align:center;
-  letter-spacing:.06em;
+  letter-spacing:.08em;
 }
 
 .menu-items{
@@ -222,8 +249,8 @@ a{color:inherit; text-decoration:none}
 
 .menu-items p{
   margin: 0 0 12px;
-  font-size:19px;
-  font-weight:600;
+  font-size:20px;
+  font-weight:650;
   line-height:1.8;
 }
 
@@ -231,14 +258,82 @@ a{color:inherit; text-decoration:none}
   font-size: 13px;
   color: var(--muted);
   margin-left: 6px;
+  font-weight:650;
 }
 
 @media (max-width: 700px){
   .page-title{ font-size:34px; }
-  .menu-items p{ font-size:16px; }
+  .menu-items p{ font-size:18px; }
+  .menu-h{ font-size:24px; }
 }
 
-/* ===== Gallery ===== */
+/* ================= Menu section backgrounds ================= */
+/* Base for all image-backed sections */
+#menu-beef,
+#menu-bird,
+#menu-seafood,
+#menu-sides,
+#menu-desserts{
+  position: relative;
+  padding: 54px 0;
+  margin-top: 28px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 18px;
+}
+
+/* Assign images */
+#menu-beef{ background-image: url("./assets/beef-bg.png"); }
+#menu-bird{ background-image: url("./assets/bird-bg.png"); }
+#menu-seafood{ background-image: url("./assets/seafood-bg.png"); }
+#menu-sides{ background-image: url("./assets/sides-bg.png"); }
+#menu-desserts{ background-image: url("./assets/dessert-bg.png"); }
+
+/* Dark overlay for readability */
+#menu-beef::before,
+#menu-bird::before,
+#menu-seafood::before,
+#menu-sides::before,
+#menu-desserts::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,.62);
+  border-radius: 18px;
+}
+
+/* Keep text above overlay */
+#menu-beef > *,
+#menu-bird > *,
+#menu-seafood > *,
+#menu-sides > *,
+#menu-desserts > *{
+  position: relative;
+  z-index: 1;
+}
+
+/* Parallax feel (desktop) */
+#menu-beef,
+#menu-bird,
+#menu-seafood,
+#menu-sides,
+#menu-desserts{
+  background-attachment: fixed;
+}
+
+/* Mobile: disable fixed attachment for performance */
+@media (max-width: 860px){
+  #menu-beef,
+  #menu-bird,
+  #menu-seafood,
+  #menu-sides,
+  #menu-desserts{
+    background-attachment: scroll;
+  }
+}
+
+/* ================= Gallery ================= */
 .gallery{
   margin-top:14px;
   display:grid;
@@ -263,7 +358,7 @@ a{color:inherit; text-decoration:none}
   .gallery img{ height:240px; }
 }
 
-/* ===== Forms ===== */
+/* ================= Forms ================= */
 .form{
   margin-top:16px;
   display:grid;
@@ -273,7 +368,7 @@ a{color:inherit; text-decoration:none}
 label{
   display:grid;
   gap:6px;
-  font-weight:750;
+  font-weight:800;
 }
 
 input,
@@ -306,7 +401,27 @@ select:focus{
   .grid-2{grid-template-columns:1fr}
 }
 
-/* ===== Footer ===== */
+/* ================= Fade-in on scroll ================= */
+.fade{
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+
+.fade.in{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce){
+  .fade{
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ================= Footer ================= */
 .site-footer{
   padding:26px 0;
   border-top:1px solid var(--border);
