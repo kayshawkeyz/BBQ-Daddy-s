@@ -32,7 +32,7 @@
 </header>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero fade">
   <div class="container hero-grid">
     <div>
       <h1 class="hero-title">BBQ DADDY’S</h1>
@@ -53,12 +53,14 @@
   </div>
 </section>
 
-<!-- MENU (Burnt Bean style: simple headings + simple lists) -->
+<!-- MENU -->
 <section id="menu" class="section alt">
   <div class="container">
+
     <h2 class="page-title">Menu</h2>
 
-    <nav class="menu-jump" aria-label="Menu jump links">
+    <!-- Floating Menu Navigation -->
+    <nav class="menu-jump menu-jump--sticky">
       <a href="#menu-beef">Beef</a>
       <a href="#menu-bird">Bird</a>
       <a href="#menu-seafood">Seafood</a>
@@ -67,7 +69,8 @@
       <a href="#menu-drinks">Drinks</a>
     </nav>
 
-    <div class="menu-block" id="menu-beef">
+    <!-- BEEF -->
+    <div class="menu-block fade" id="menu-beef">
       <h3 class="menu-h">Beef</h3>
       <div class="menu-items">
         <p>Smoked Tomahawk Steak</p>
@@ -81,12 +84,13 @@
       </div>
     </div>
 
-    <div class="menu-block" id="menu-bird">
+    <!-- BIRD -->
+    <div class="menu-block fade" id="menu-bird">
       <h3 class="menu-h">Bird</h3>
       <div class="menu-items">
         <p>Chicken Wings <span class="menu-note-inline">(20+ Flavors)</span></p>
         <p>Jamaican Jerk Chicken</p>
-        <p>Fried Chicken &amp; Caviar</p>
+        <p>Fried Chicken & Caviar</p>
         <p>Hot Chicken Sausage</p>
         <p>Jamaican Jerk Chicken Patty</p>
         <p>Smoked Turkey</p>
@@ -94,22 +98,24 @@
       </div>
     </div>
 
-    <div class="menu-block" id="menu-seafood">
+    <!-- SEAFOOD -->
+    <div class="menu-block fade" id="menu-seafood">
       <h3 class="menu-h">Seafood</h3>
       <div class="menu-items">
         <p>Seafood Boil Campanelle</p>
         <p>Mini Crab Cakes</p>
-        <p>Smoked &amp; Glazed Salmon Bites</p>
+        <p>Smoked & Glazed Salmon Bites</p>
         <p>Stuffed Fried Fish</p>
         <p>Whole Snapper</p>
         <p>King Crab Legs</p>
       </div>
     </div>
 
-    <div class="menu-block" id="menu-sides">
+    <!-- SIDES -->
+    <div class="menu-block fade" id="menu-sides">
       <h3 class="menu-h">Sides</h3>
       <div class="menu-items">
-        <p>Baked Mac &amp; Cheese</p>
+        <p>Baked Mac & Cheese</p>
         <p>Honey-Fried Cheese</p>
         <p>Cowboy Beans</p>
         <p>Beefy Greens</p>
@@ -122,7 +128,8 @@
       </div>
     </div>
 
-    <div class="menu-block" id="menu-desserts">
+    <!-- DESSERTS -->
+    <div class="menu-block fade" id="menu-desserts">
       <h3 class="menu-h">Desserts</h3>
       <div class="menu-items">
         <p>Dark Rum Pineapple Upside-Down Cake</p>
@@ -133,7 +140,8 @@
       </div>
     </div>
 
-    <div class="menu-block" id="menu-drinks">
+    <!-- DRINKS -->
+    <div class="menu-block fade" id="menu-drinks">
       <h3 class="menu-h">Drinks</h3>
       <div class="menu-items">
         <p>Premium Water (Still or Sparkling)</p>
@@ -145,119 +153,86 @@
       </div>
     </div>
 
-    <p class="small muted" style="margin-top:18px;">
-      Menu items and availability may vary. Tell us your headcount and catering style for a custom quote.
-    </p>
   </div>
 </section>
 
 <!-- GALLERY -->
-<section id="gallery" class="section">
+<section id="gallery" class="section fade">
   <div class="container">
     <h2>Gallery</h2>
-    <p class="muted">A few customer favorites</p>
 
     <div class="gallery">
       <figure class="card">
-        <img src="assets/brisket.png" alt="Smoked brisket" />
-        <figcaption class="muted small">Smoked Brisket</figcaption>
+        <img src="assets/brisket.png">
       </figure>
-
       <figure class="card">
-        <img src="assets/wings.png" alt="BBQ wings" />
-        <figcaption class="muted small">Sauced Wings</figcaption>
+        <img src="assets/wings.png">
       </figure>
-
       <figure class="card">
-        <img src="assets/catering-table.png" alt="Full BBQ catering spread" />
-        <figcaption class="muted small">Full Catering Spread</figcaption>
+        <img src="assets/catering-table.png">
       </figure>
     </div>
   </div>
 </section>
 
 <!-- QUOTE -->
-<section id="quote" class="section alt">
+<section id="quote" class="section alt fade">
   <div class="container">
     <h2>Request a Quote</h2>
-    <p class="muted">Fill this out and we’ll reply by email.</p>
 
     <form class="form" action="https://formspree.io/f/mzddqjzy" method="POST">
-      <input type="hidden" name="_subject" value="BBQ Daddy’s Quote Request (Website)" />
-      <input type="hidden" name="source" value="bbq-daddys.com" />
-      <input type="hidden" name="_next" value="https://bbq-daddys.com/thanks.html" />
-      <input type="text" name="_gotcha" style="display:none" />
 
       <div class="grid-2">
-        <label>
-          Name
-          <input name="name" required />
-        </label>
-
-        <label>
-          Email
-          <input type="email" name="email" required />
-        </label>
-
-        <label>
-          Event Date
-          <input type="date" name="event_date" required />
-        </label>
-
-        <label>
-          Estimated Guests
-          <input type="number" name="guest_count" required />
-        </label>
+        <label>Name<input name="name" required></label>
+        <label>Email<input type="email" name="email" required></label>
+        <label>Event Date<input type="date" name="event_date" required></label>
+        <label>Guests<input type="number" name="guest_count" required></label>
 
         <label>
           Catering Style
           <select name="catering_style" required>
-            <option value="">Select an option</option>
-            <option value="Pick-up">Pick-up</option>
-            <option value="Delivery">Delivery</option>
-            <option value="Private Event">Private Event</option>
+            <option value="">Select</option>
+            <option>Pick-up</option>
+            <option>Delivery</option>
+            <option>Private Event</option>
           </select>
         </label>
 
-        <label>
-          Event Location
-          <input name="location" required placeholder="Venue address or city" />
-        </label>
+        <label>Location<input name="location" placeholder="Venue address or city" required></label>
       </div>
 
       <label>
         Event Details
-        <textarea
-          name="details"
-          rows="6"
-          required
-          placeholder="Tell us about your event, menu ideas, dietary needs, timing, setup, etc."></textarea>
+        <textarea name="details" rows="6" required></textarea>
       </label>
 
-      <button class="btn" type="submit">Send Quote Request</button>
+      <button class="btn">Send Quote</button>
     </form>
   </div>
 </section>
 
 <footer class="site-footer">
   <div class="container footer-grid">
-    <div>
-      <strong>BBQ Daddy’s</strong>
-      <p class="muted">Frederick, MD</p>
-    </div>
-
-    <div>
-      <a href="mailto:BBQ.Daddys.Info@gmail.com">BBQ.Daddys.Info@gmail.com</a>
-    </div>
-
-    <div class="small muted">
-      © <span id="year"></span> BBQ Daddy’s
-    </div>
+    <strong>BBQ Daddy’s</strong>
+    <span class="muted">Frederick, MD</span>
+    <span class="small muted">© <span id="year"></span></span>
   </div>
 </footer>
 
 <script>
-  document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("year").textContent=new Date().getFullYear();
+
+// Fade-in on scroll
+const els=document.querySelectorAll('.fade');
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('in');
+      io.unobserve(e.target);
+    }
+  });
+},{threshold:.12});
+els.forEach(el=>io.observe(el));
 </script>
 
 </body>
