@@ -25,13 +25,13 @@ body{
   line-height:1.5;
 }
 
-a{color:inherit;text-decoration:none}
-.container{max-width:1100px;margin:0 auto;padding:0 18px}
+a{color:inherit; text-decoration:none}
+.container{max-width:1100px; margin:0 auto; padding:0 18px}
 
 .muted{color:var(--muted)}
 .small{font-size:12px}
 
-/* ================= Header ================= */
+/* ================= HEADER ================= */
 .site-header{
   position:sticky; top:0; z-index:50;
   background: rgba(11,13,18,.72);
@@ -78,11 +78,7 @@ a{color:inherit;text-decoration:none}
 .nav a{opacity:.92}
 .nav a:hover{opacity:1}
 
-@media (max-width: 860px){
-  .nav{display:none}
-}
-
-/* ================= Buttons ================= */
+/* ================= BUTTONS ================= */
 .btn{
   display:inline-block;
   padding:12px 16px;
@@ -90,7 +86,7 @@ a{color:inherit;text-decoration:none}
   background: var(--accent);
   border:1px solid rgba(255,255,255,.18);
   box-shadow: 0 10px 30px rgba(255,77,46,.18);
-  font-weight:800;
+  font-weight:750;
 }
 
 .btn.secondary{
@@ -99,11 +95,14 @@ a{color:inherit;text-decoration:none}
   box-shadow:none;
 }
 
-/* ================= Hero ================= */
+/* ================= HERO ================= */
 .hero{
   position: relative;
-  padding:92px 0 70px;
-  background: url("./assets/hero-bg.png") center / cover no-repeat;
+  padding:72px 0 42px;
+  background-image: url("assets/hero-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .hero::before{
@@ -125,18 +124,31 @@ a{color:inherit;text-decoration:none}
   align-items:start;
 }
 
+.pill{
+  display:inline-block;
+  padding:8px 12px;
+  border-radius:999px;
+  background: rgba(255,255,255,.06);
+  border:1px solid var(--border);
+  color: var(--muted);
+  font-weight:650;
+  margin:0 0 12px;
+}
+
 .hero-title{
-  font-size:56px;
-  font-weight:900;
+  font-size:52px;
+  margin:0 0 8px;
+  line-height:1.02;
   letter-spacing:.06em;
-  margin:0 0 6px;
+  text-transform: uppercase;
+  font-weight: 950;
 }
 
 .hero-subtitle{
-  font-size:20px;
-  font-weight:650;
-  color: rgba(244,246,255,.9);
+  font-size:18px;
   margin:0 0 14px;
+  color: rgba(244,246,255,.92);
+  font-weight: 750;
 }
 
 .lead{
@@ -155,12 +167,12 @@ a{color:inherit;text-decoration:none}
   .hero-actions{flex-direction:column; align-items:stretch}
 }
 
-@media (max-width: 700px){
-  .hero-title{ font-size:42px; }
-  .hero-subtitle{ font-size:16px; }
+@media (max-width: 860px){
+  .nav{display:none}
+  .hero-title{font-size:40px}
 }
 
-/* ================= Sections ================= */
+/* ================= SECTIONS / CARDS ================= */
 .section{ padding:42px 0; }
 
 .section.alt{
@@ -168,6 +180,13 @@ a{color:inherit;text-decoration:none}
   border-top:1px solid var(--border);
   border-bottom:1px solid var(--border);
 }
+
+h2{
+  font-size:32px;
+  margin:0 0 6px;
+}
+
+h3{margin:0 0 8px}
 
 .card{
   background: var(--panel2);
@@ -177,193 +196,49 @@ a{color:inherit;text-decoration:none}
   box-shadow: var(--shadow);
 }
 
-/* ================= Menu (Burnt Bean style) ================= */
-.page-title{
-  font-size:40px;
-  margin:0 0 10px;
-}
-
-/* jump links */
-.menu-jump{
-  display:flex;
-  flex-wrap:wrap;
-  gap:10px 12px;
-  margin: 6px 0 20px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid var(--border);
-}
-
-.menu-jump a{
-  font-weight:800;
-  opacity:.95;
-  padding:6px 10px;
-  border-radius:999px;
-  border:1px solid var(--border);
-  background: rgba(0,0,0,.18);
-}
-
-.menu-jump a:hover{opacity:1}
-
-/* floating/sticky menu navigation */
-.menu-jump--sticky{
-  position: sticky;
-  top: 68px; /* below header */
-  z-index: 40;
-  background: rgba(11,13,18,.78);
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  padding: 10px 12px;
-  margin: 10px 0 22px;
-}
-
-/* section blocks + Burnt Bean-ish divider */
-.menu-block{
-  padding: 44px 0;
-  border-bottom: 1px solid rgba(255,255,255,.12);
-  position: relative;
-}
-
-.menu-block::after{
-  content:"";
-  position:absolute;
-  left: 0;
-  right: 0;
-  bottom: -1px;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255,77,46,.35), transparent);
-}
-
-/* centered + bold headers/items */
-.menu-h{
-  margin:0 0 14px;
-  font-size:28px;
-  font-weight:900;
-  text-align:center;
-  letter-spacing:.08em;
-}
-
-.menu-items{
-  text-align:center;
-}
-
-.menu-items p{
-  margin: 0 0 12px;
-  font-size:20px;
-  font-weight:650;
-  line-height:1.8;
-}
-
-.menu-note-inline{
-  font-size: 13px;
-  color: var(--muted);
-  margin-left: 6px;
-  font-weight:650;
-}
-
-@media (max-width: 700px){
-  .page-title{ font-size:34px; }
-  .menu-items p{ font-size:18px; }
-  .menu-h{ font-size:24px; }
-}
-
-/* ================= Menu section backgrounds ================= */
-#menu-beef,
-#menu-bird,
-#menu-seafood,
-#menu-sides,
-#menu-desserts,
-#menu-drinks{
-  position: relative;
-  padding: 54px 0;
-  margin-top: 28px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 18px;
-}
-
-/* Assign images */
-#menu-beef{ background-image: url("./assets/beef-bg.png"); }
-#menu-bird{ background-image: url("./assets/bird-bg.png"); }
-#menu-seafood{ background-image: url("./assets/seafood-bg.png"); }
-#menu-sides{ background-image: url("./assets/sides-bg.png"); }
-#menu-desserts{ background-image: url("./assets/dessert-bg.png"); }
-#menu-drinks{ background-image: url("./assets/drinks-bg.png"); }
-
-/* Dark overlay for readability */
-#menu-beef::before,
-#menu-bird::before,
-#menu-seafood::before,
-#menu-sides::before,
-#menu-desserts::before,
-#menu-drinks::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background: rgba(0,0,0,.62);
-  border-radius: 18px;
-}
-
-/* Keep text above overlay */
-#menu-beef > *,
-#menu-bird > *,
-#menu-seafood > *,
-#menu-sides > *,
-#menu-desserts > *,
-#menu-drinks > *{
-  position: relative;
-  z-index: 1;
-}
-
-/* Parallax feel (desktop) */
-#menu-beef,
-#menu-bird,
-#menu-seafood,
-#menu-sides,
-#menu-desserts,
-#menu-drinks{
-  background-attachment: fixed;
-}
-
-/* Mobile: disable fixed attachment for performance */
-@media (max-width: 860px){
-  #menu-beef,
-  #menu-bird,
-  #menu-seafood,
-  #menu-sides,
-  #menu-desserts,
-  #menu-drinks{
-    background-attachment: scroll;
-  }
-}
-
-/* ================= Gallery ================= */
-.gallery{
-  margin-top:14px;
+.cards{
   display:grid;
   grid-template-columns: repeat(3, 1fr);
   gap:14px;
+  margin-top:14px;
 }
-
-.gallery img{
-  width:100%;
-  height:220px;
-  object-fit:cover;
-  display:block;
-  border-radius: 14px;
-  border:1px solid rgba(255,255,255,.10);
-}
-
-.gallery figure{margin:0}
-.gallery figcaption{margin-top:10px}
 
 @media (max-width: 860px){
-  .gallery{ grid-template-columns:1fr; }
-  .gallery img{ height:240px; }
+  .cards{grid-template-columns:1fr}
 }
 
-/* ================= Forms ================= */
+/* ================= SECTION DIVIDERS (Burnt Bean style vibe) ================= */
+.section-divider{
+  height:1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,.18),
+    rgba(255,77,46,.30),
+    rgba(255,255,255,.18),
+    transparent
+  );
+  margin: 28px 0;
+}
+
+/* ================= FADE-IN ON SCROLL ================= */
+.fade{
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity .7s ease, transform .7s ease;
+  will-change: opacity, transform;
+}
+
+.fade.in{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce){
+  .fade{opacity:1; transform:none; transition:none}
+}
+
+/* ================= FORM CONTROLS ================= */
 .form{
   margin-top:16px;
   display:grid;
@@ -373,7 +248,7 @@ a{color:inherit;text-decoration:none}
 label{
   display:grid;
   gap:6px;
-  font-weight:800;
+  font-weight:750;
 }
 
 input,
@@ -406,27 +281,231 @@ select:focus{
   .grid-2{grid-template-columns:1fr}
 }
 
-/* ================= Fade-in on scroll ================= */
-.fade{
-  opacity: 0;
-  transform: translateY(14px);
-  transition: opacity .7s ease, transform .7s ease;
+/* ================= GALLERY ================= */
+.gallery{
+  margin-top:14px;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:14px;
 }
 
-.fade.in{
-  opacity: 1;
-  transform: translateY(0);
+.gallery figure{margin:0}
+.gallery figcaption{margin-top:10px}
+
+.gallery img{
+  width:100%;
+  height:240px;
+  object-fit:cover;
+  display:block;
+  border-radius: 14px;
+  border:1px solid rgba(255,255,255,.10);
+  transition: transform .25s ease, filter .25s ease;
 }
 
-@media (prefers-reduced-motion: reduce){
-  .fade{
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
+.gallery img:hover{
+  transform: scale(1.02);
+  filter: contrast(1.05) saturate(1.05);
 }
 
-/* ================= Footer ================= */
+@media (max-width: 860px){
+  .gallery{ grid-template-columns:1fr; }
+  .gallery img{ height:260px; }
+}
+
+/* Gallery item helper class (used by scripts.js lightbox click) */
+.g-item{cursor:pointer}
+
+/* ================= LIGHTBOX ================= */
+.lightbox{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.82);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  z-index: 9999;
+}
+
+.lightbox.open{display:flex}
+
+.lightbox-inner{
+  max-width: 1000px;
+  width: 100%;
+  background: rgba(18,22,37,.72);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 18px;
+  box-shadow: 0 26px 80px rgba(0,0,0,.55);
+  overflow: hidden;
+  position: relative;
+}
+
+.lightbox-inner img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.lightbox-cap{
+  padding: 12px 14px 14px;
+  color: var(--muted);
+  font-weight: 750;
+  border-top: 1px solid rgba(255,255,255,.10);
+  background: rgba(0,0,0,.25);
+}
+
+.lightbox-close{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.18);
+  background: rgba(0,0,0,.35);
+  color: var(--text);
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* ================= FLOATING MENU NAV ================= */
+.float-nav{
+  position: sticky;
+  top: 74px; /* below header */
+  z-index: 30;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px 12px;
+  margin: 0 auto 18px;
+  max-width: 1100px;
+
+  background: rgba(18,22,37,.55);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 999px;
+  backdrop-filter: blur(10px);
+}
+
+.float-nav a{
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(0,0,0,.22);
+  font-weight: 850;
+  letter-spacing: .02em;
+  opacity: .9;
+}
+
+.float-nav a:hover{ opacity: 1; }
+
+.float-nav a.active{
+  background: rgba(255,77,46,.18);
+  border-color: rgba(255,77,46,.5);
+  box-shadow: 0 10px 26px rgba(255,77,46,.18);
+}
+
+@media (max-width: 640px){
+  .float-nav{ top: 66px; }
+}
+
+/* ================= MENU BLOCKS (Background + Centered type) ================= */
+.menu-block{
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  padding: 42px 18px;
+  margin: 18px 0;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(18,22,37,.72);
+  box-shadow: var(--shadow);
+}
+
+.menu-block::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,.62);
+  pointer-events:none;
+}
+
+.menu-block > *{
+  position: relative;
+  z-index: 1;
+}
+
+.menu-h{
+  text-align: center;
+  font-size: 36px;
+  font-weight: 950;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin: 0 0 18px;
+}
+
+.menu-items{
+  text-align: center;
+  display: grid;
+  gap: 12px;
+  font-size: 19px;
+  font-weight: 850;
+}
+
+.menu-items p{
+  margin: 0;
+  line-height: 1.25;
+}
+
+.menu-note-inline{
+  opacity: .95;
+  font-weight: 950;
+}
+
+@media (max-width: 640px){
+  .menu-h{ font-size: 30px; }
+  .menu-items{ font-size: 16px; }
+}
+
+/* Background image classes (make sure these filenames match exactly in /assets) */
+.bg-beef{
+  background-image: url("assets/steak.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.bg-bird{
+  background-image: url("assets/jerk_chicken.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.bg-seafood{
+  background-image: url("assets/crab.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.bg-sides{
+  background-image: url("assets/mac.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.bg-desserts{
+  background-image: url("assets/Desert.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.bg-drinks{
+  background-image: url("assets/drinks-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* ================= FOOTER ================= */
 .site-footer{
   padding:26px 0;
   border-top:1px solid var(--border);
