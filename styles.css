@@ -268,12 +268,12 @@ a{color:inherit;text-decoration:none}
 }
 
 /* ================= Menu section backgrounds ================= */
-/* Base for all image-backed sections */
 #menu-beef,
 #menu-bird,
 #menu-seafood,
 #menu-sides,
-#menu-desserts{
+#menu-desserts,
+#menu-drinks{
   position: relative;
   padding: 54px 0;
   margin-top: 28px;
@@ -328,12 +328,12 @@ a{color:inherit;text-decoration:none}
 
 /* Mobile: disable fixed attachment for performance */
 @media (max-width: 860px){
-#menu-beef,
-#menu-bird,
-#menu-seafood,
-#menu-sides,
-#menu-desserts,
-#menu-drinks{
+  #menu-beef,
+  #menu-bird,
+  #menu-seafood,
+  #menu-sides,
+  #menu-desserts,
+  #menu-drinks{
     background-attachment: scroll;
   }
 }
