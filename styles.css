@@ -469,37 +469,37 @@ select:focus{
 
 /* Background image classes (make sure these filenames match exactly in /assets) */
 .bg-beef{
-  background-image: url("assets/steak.png");
+  background-image: url("./assets/beef-bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 .bg-bird{
-  background-image: url("assets/jerk_chicken.png");
+  background-image: url("./assets/bird-bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 .bg-seafood{
-  background-image: url("assets/crab.png");
+  background-image: url("./assets/seafood-bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 .bg-sides{
-  background-image: url("assets/mac.png");
+  background-image: url("./assets/sides-bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 .bg-desserts{
-  background-image: url("assets/Desert.png");
+  background-image: url("./assets/dessert-bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 .bg-drinks{
-  background-image: url("assets/drinks-bg.png");
+  background-image: url("./assets/drinks-bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
